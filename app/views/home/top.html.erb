@@ -1,0 +1,13 @@
+<div class="we">
+  <div class="top-main">
+   <div class="saw">
+    <div class="forms">
+     <p class="kotoba">Potepan Shareでまだ体験したことのない旅をしよう</p>
+     <%= search_form_for @q  do |f| %>
+       <%= f.search_field :address_cont,placeholder: 'エリア検索' %>
+       <%= f.submit "検索"%>
+     <% end %>
+    </div>
+   </div>
+  </div>
+</div>

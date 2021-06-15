@@ -1,0 +1,257 @@
+//////////////////////////////////////////////共通
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.header_a{
+    color: #fff;
+}
+.header {
+    height: 90px;
+    padding: 4px 30px;
+    background-color: #000000;
+}
+.footer {
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    height: 90px;
+    background-color: #111;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+//////////////////////////////////////////////ヘッダーログイン系
+.header_b{
+  text-align: right; 
+  margin-top: -50px;
+}
+
+.lii{
+  display       : inline-block;
+  border-radius : .25rem;         /* 角丸       */
+  font-size     : 8pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #1e90ff;     /* 背景色     */
+}
+
+.liii{
+  display       : inline-block;
+  border-radius : .25rem;         /* 角丸       */
+  font-size     : 8pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #ff0000;     /* 背景色     */
+}
+
+a{
+ text-decoration: none;
+ color :#ffffff;
+}
+
+
+//////////////////////////////////////////////メイン
+.top-main {
+    background-image: url(https://presite-potepancamp-rails-02.herokuapp.com/assets/img_cover_top.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+}
+
+.eria{
+  margin-left:240px;
+  margin-top:-60px;
+}
+
+
+.forms{
+    margin-left:100px;
+    width:350px;
+    height:200px;
+    background: #fff;
+    padding: 24px;
+    border-radius: 5px;
+}
+
+.saw{
+  position:absolute;
+  margin-top:150px;
+}
+
+.kotoba{
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 1px;
+  margin:0px;
+}
+
+.forms input[type="search" i]{
+  width: 100%;
+  padding:8px;
+  margin-top:8px;
+  margin-bottom:8px;
+}
+
+.forms input[type="submit" i]{
+  width: 100%;
+  padding:8px;
+  color:#ffffff;
+  background:#4169e1;
+}
+
+//////////////////////////////////////////////確認画面
+.icon_image {
+  width: 100px;
+  height: 100px;
+  //サイズ指定
+  border-radius: 100px;
+  //画像を丸くする
+  object-fit: cover;
+  //タテヨコ比を変えないままトリミング
+}
+
+.ww{
+  margin-top:60px;
+  margin-left:30px;
+}
+
+ table th {
+        background-color: #708090;
+        padding: 10px 30px;
+    }
+ 
+  table td {
+        background-color: #f5f5f5;
+        padding: 10px 100px;
+    }
+.room_a{
+  margin-top:3px;
+}  
+.room{
+  margin-bottom : 3px;
+  width         : 100px;
+  display       : block;
+  border-radius : .25rem;         /* 角丸       */
+  font-size     : 8pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 5px ;   /* 余白       */
+  background    : #006400;     /* 背景色     */
+}
+
+.rooms{
+  margin-bottom : 3px;
+  width         : 100px;
+  display       : block;
+  border-radius : .25rem;         /* 角丸       */
+  font-size     : 8pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 5px ;   /* 余白       */
+  background    : #ff8c00;     /* 背景色     */
+}
+
+.roomp{
+  margin-bottom : 3px;
+  width         : 100px;
+  display       : block;
+  border-radius : .25rem;         /* 角丸       */
+  font-size     : 8pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 5px ;   /* 余白       */
+  background    : #6a5acd;     /* 背景色     */
+}
+//////////////////////////////////////////////ルーム確認画面
+
+.icon_imagea {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+  //タテヨコ比を変えないままトリミング
+}
+
+.romm{
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+}
+.romma{
+  background-color: #4b0082;
+  padding: 10px 15px;
+}
+
+.rommb{
+  background-color: #ffa500;
+  padding: 10px 15px;
+}
+
+
+///////////////////////////////////ヘッダーメニュー
+
+.menu {
+  margin-top:28px;
+  position: absolute;
+  right:30px;
+  color :#f8f8ff;
+  text-align: center ;
+}
+
+.menu a {
+    text-align: center ;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color:#000000;
+}
+
+.oo {
+    text-align: center ;
+    display: block;
+    margin: 0 0 4px 0;
+    padding : 15px 22px 15px 15px ;
+    line-height: 1;
+    cursor :pointer;
+}
+
+.aa {
+    display: none;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    background :#f4f4f4;
+    list-style: none;
+}
+
+.menu li {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#menu_bar01:checked ~ #links01 li {
+    height: 54px;
+    opacity: 1;
+}
+
+
+///////////////////////////////////検索機能
