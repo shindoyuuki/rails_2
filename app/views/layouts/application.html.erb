@@ -10,6 +10,41 @@
   </head>
 
   <body>
+    <header class="header">
+      <a class="header_a" href="/home/top"><h1>旅行予約サイト</h1></a>
+      <div class="eria">
+      <%= search_form_for @q  do |f| %>
+       <%= f.search_field :address_cont, placeholder: 'エリア検索' %>
+       <%= f.search_field :room_name_cont, placeholder: 'キーワード検索' %>
+       <%= f.submit "検索" %>
+      <% end %>
+      </div>
+       <div>
+        <ul class="header_b">
+         <% if user_signed_in? %>
+           <div class="menu">
+           <%= current_user.name %>様
+            <label class-"oo" for="menu_bar01">メニュー表</label>
+             <input class="aa" type="checkbox" id="menu_bar01" />
+              <ul id="links01">
+               <li><%= link_to 'マイページ', new_user_session_path%></li>
+               <li><%= link_to '登録済みルーム一覧', rooms_posts_path %></li>
+               <li><%= link_to '予約済みルーム一覧', reservations_posts_path %></li>
+               <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+               <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+              </ul>
+           </div>
+         <% else %>
+           <li class="lii"><%= link_to '新規アカウント作成', new_user_registration_path%></li>
+           <li class="lii"><%= link_to 'ログイン', new_user_session_path%></li>
+         <% end %>
+        </ul>
+       </div>
+         
+    </header>
     <%= yield %>
+    <footer class="footer">
+      <p>© 2020 POTEPAN.INC.</p>
+    </footer>
   </body>
 </html>

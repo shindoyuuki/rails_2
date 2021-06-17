@@ -1,0 +1,23 @@
+<div class="ww">
+<table>
+      <tr>
+        <th>アイコン</th>
+        <td><img src=<%= @user.image %> class = "icon_image"></td>
+      </tr>
+      <tr>
+        <th>自己紹介</th>
+        <td><%= @user.profile %></td>
+      </tr>
+      <tr>
+        <th>名前</th>
+        <td><%= @user.name %></td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td><%= @user.email %></td>
+      </tr>
+</table>
+ <div class="room_a">
+   <li class="room"><%= link_to "ルーム登録", :new_room %></li>
+ </div>
+</div>

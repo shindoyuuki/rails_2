@@ -1,0 +1,28 @@
+<h1>予約済みルーム一覧</h1>
+ 
+ <table>
+   <thead>
+     <tr>
+        <th>部屋番号</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>人数</th>
+        <th>合計金額</th>
+        <th>予約内容確認</th>
+        <th>キャンセル</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+     <% @reservations.each do |reservation| %>
+       <td class="romm"><%= reservation.room_id %>番</td>
+       <td class="romm"><%= reservation.start_date %></td>
+       <td class="romm"><%= reservation.end_date %></td>
+       <td class="romm"><%= reservation.number_of_people %>人</td>
+       <td class="romm"><%= (reservation.number_of_people).to_i*(reservation.price).to_i %></td>
+       <td class="rommb"><%= link_to "確認", reservation %>
+       <td class="romma"><%= link_to "キャンセルしますか？", reservation, method: :delete, data: { confirm: "本当キャンセルしますか？" } %> </td>
+     </tr>
+     <% end %>
+   </tbody>
+ </table>

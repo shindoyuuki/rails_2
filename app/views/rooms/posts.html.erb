@@ -1,0 +1,30 @@
+<h1>登録済みルーム一覧</h1>
+ 
+ <table>
+   <thead>
+     <tr align="center">
+        <th>部屋番号</th>
+        <th>ルーム画像</th>
+        <th>ルーム名</th>
+        <th>ルーム紹介</th>
+        <th>料金</th>
+        <th>住所</th>
+        <th>予約</th>
+        <th>削除</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% @rooms.each do |room| %>
+      <tr>
+        <td class="romm"><%= room.id %></td>
+        <td class="romm"><img src=<%= room.room_image %> class = "icon_imagea"></td>
+        <td class="romm"><%= room.room_name %></td>
+        <td class="romm"><%= room.introduction %></td>
+        <td class="romm"><%= room.price %></td>
+        <td class="romm"><%= room.address %></td>
+        <td class="rommb"><%= link_to "予約しますか？", room %>
+        <td class="romma"><%= link_to "削除しますか？", room, method: :delete, data: { confirm: "本当に削除しますか？" } %> </td>
+      </tr>
+    <% end %>
+   </tbody>
+ </table>
