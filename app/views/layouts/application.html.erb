@@ -28,8 +28,8 @@
              <input class="aa" type="checkbox" id="menu_bar01" />
               <ul id="links01">
                <li><%= link_to 'マイページ', new_user_session_path%></li>
-               <li><%= link_to '登録済みルーム一覧', rooms_index_path %></li>
-               <li><%= link_to '予約済みルーム一覧', reservations_index_path %></li>
+               <li><%= link_to '登録済みルーム一覧', rooms_posts_path %></li>
+               <li><%= link_to '予約済みルーム一覧', reservations_posts_path %></li>
                <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
                <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
               </ul>

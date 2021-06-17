@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  
+
   def index
     @rooms = Room.all
     @reservations = Reservation.all
@@ -14,14 +14,16 @@ class RoomsController < ApplicationController
   end 
   
   def create
-    @room = Room.new(params.require(:room).permit(:id,:room_name, :introduction, :price, :address, :room_image))
-    if @room.save
-      redirect_to rooms_index_path
-    else
-      render :new
-    end
+    @room = Room.new(room_params)  
+    @room.user_id = current_user.id 
+    @room.save
+    redirect_to rooms_posts_path
   end
-
+ 
+  def posts
+    @rooms = current_user.rooms.all
+  end
+  
   def show
     @room = Room.find(params[:id])
     @reservation = Reservation.new
@@ -32,4 +34,9 @@ class RoomsController < ApplicationController
     @room.destroy 
     redirect_to :rooms
   end
+  
+  private
+    def room_params
+      params.require(:room).permit(:id,:room_name,:user_id, :introduction, :price, :address, :room_image) 
+    end
 end
